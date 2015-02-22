@@ -16,12 +16,33 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="assets\js\modules\home\views\header.html" />
+    <Content Include="assets\js\modules\home\views\index.html" />
+    <Content Include="assets\js\modules\home\views\loginHeader.html" />
+    <Content Include="assets\js\modules\projects\views\editMatchDialog.html" />
+    <Content Include="assets\js\modules\projects\views\matches.html" />
+    <Content Include="assets\js\modules\user\views\profile.html" />
+    <Content Include="assets\js\modules\user\views\user.html" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="api\controllers\CashbookController.js" />
     <Compile Include="api\models\Cashbook.js" />
     <Compile Include="app.js" />
+    <Compile Include="assets\js\app.js" />
+    <Compile Include="assets\js\modules\home\presenter\homePresenter.js" />
+    <Compile Include="assets\js\modules\home\presenter\languagePresenter.js" />
+    <Compile Include="assets\js\modules\home\presenter\navigationPresenter.js" />
+    <Compile Include="assets\js\modules\home\services\alertService.js" />
+    <Compile Include="assets\js\modules\projects\presenter\editMatchPresenter.js" />
+    <Compile Include="assets\js\modules\projects\presenter\matchPresenter.js" />
+    <Compile Include="assets\js\modules\projects\services\leagueService.js" />
+    <Compile Include="assets\js\modules\projects\services\matchService.js" />
+    <Compile Include="assets\js\modules\user\presenter\userPresenter.js" />
+    <Compile Include="assets\js\modules\user\presenter\userProfilePresenter.js" />
+    <Compile Include="assets\js\modules\user\services\authenticationService.js" />
+    <Compile Include="assets\js\modules\user\services\userService.js" />
+    <Compile Include="assets\js\modules\user\userConfig.js" />
     <Compile Include="Gruntfile.js" />
     <Content Include="assets\robots.txt" />
     <Content Include="assets\favicon.ico" />
@@ -46,6 +67,7 @@
     <Content Include="views\403.ejs" />
     <Content Include="views\404.ejs" />
     <Content Include="views\500.ejs" />
+    <Content Include="views\home.ejs" />
     <Content Include="views\homepage.ejs" />
     <Content Include="views\layout.ejs" />
     <Compile Include="api\controllers\UserController.js" />
@@ -56,7 +78,6 @@
     <Compile Include="api\responses\notFound.js" />
     <Compile Include="api\responses\ok.js" />
     <Compile Include="api\responses\serverError.js" />
-    <Compile Include="assets\js\dependencies\sails.io.js" />
     <Compile Include="config\env\development.js" />
     <Compile Include="config\env\production.js" />
     <Content Include="config\locales\de.json" />
@@ -95,7 +116,19 @@
     <Folder Include="assets" />
     <Folder Include="assets\images" />
     <Folder Include="assets\js" />
-    <Folder Include="assets\js\dependencies" />
+    <Folder Include="assets\js\modules\" />
+    <Folder Include="assets\js\modules\home\" />
+    <Folder Include="assets\js\modules\home\presenter\" />
+    <Folder Include="assets\js\modules\home\services\" />
+    <Folder Include="assets\js\modules\home\views\" />
+    <Folder Include="assets\js\modules\projects\" />
+    <Folder Include="assets\js\modules\projects\presenter\" />
+    <Folder Include="assets\js\modules\projects\services\" />
+    <Folder Include="assets\js\modules\projects\views\" />
+    <Folder Include="assets\js\modules\user\" />
+    <Folder Include="assets\js\modules\user\presenter\" />
+    <Folder Include="assets\js\modules\user\services\" />
+    <Folder Include="assets\js\modules\user\views\" />
     <Folder Include="assets\styles" />
     <Folder Include="assets\templates" />
     <Folder Include="config" />
