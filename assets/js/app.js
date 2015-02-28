@@ -1,11 +1,6 @@
 'use strict';
 
-// define all available modules
-angular.module('cashcontrol.user', [ ]);
-angular.module('cashcontrol.project', [ ]);
-
-var cashcontrol = angular.module('cashcontrol', ['cashcontrol.user', 'cashcontrol.project', 
-                                                 'ui.bootstrap', 'ui.router', 'ngRoute', 'pascalprecht.translate']);
+var cashcontrol = angular.module('cashcontrol', ['ui.bootstrap', 'ui.router', 'ngRoute', 'pascalprecht.translate']);
 
 // configure the main module
 cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -66,11 +61,11 @@ cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             url: '/',
             views: {
                 'header': {
-                    templateUrl: '/modules/home/views/loginHeader.html',
+                    templateUrl: '/js/modules/home/views/loginHeader.html',
                     controller: 'navigationController',
                 },
                 'main': {
-                    templateUrl: '/modules/home/views/index.html',
+                    templateUrl: '/js/modules/home/views/index.html',
                     controller: 'homeController'
                 }
             },

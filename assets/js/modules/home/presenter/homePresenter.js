@@ -1,8 +1,7 @@
 'use strict';
 
-var homeModule = angular.module('cashcontrol', []);
-
-homeModule.controller('homeController', [
+angular.module('cashcontrol')
+.controller('homeController', [
     '$scope', '$state', '$window', 'auth', 'alertService', function($scope, $state, $window, auth, alertService) {
 
         $scope.user = {

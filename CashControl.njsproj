@@ -34,9 +34,8 @@
     <Compile Include="assets\js\modules\home\services\alertService.js" />
     <Compile Include="assets\js\modules\user\presenter\userPresenter.js" />
     <Compile Include="assets\js\modules\user\presenter\userProfilePresenter.js" />
-    <Compile Include="assets\js\modules\user\services\authenticationService.js" />
+    <Compile Include="assets\js\modules\user\services\authService.js" />
     <Compile Include="assets\js\modules\user\services\userService.js" />
-    <Compile Include="assets\js\modules\user\userConfig.js" />
     <Compile Include="assets\js\userConfig.js" />
     <Compile Include="Gruntfile.js" />
     <Content Include="assets\robots.txt" />

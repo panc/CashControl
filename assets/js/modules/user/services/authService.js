@@ -1,8 +1,7 @@
 'use strict';
 
-var userModule = angular.module( 'cashcontrol.user' );
-
-userModule.factory('auth', ['$http', '$q', 'userService', function($http, $q, userService) {
+angular.module( 'cashcontrol' )
+.factory('auth', ['$http', '$q', 'userService', function($http, $q, userService) {
 
     var accessLevels = userConfig.accessLevels;
     var userRoles = userConfig.roles;

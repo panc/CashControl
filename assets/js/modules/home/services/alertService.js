@@ -1,8 +1,7 @@
 'use strict';
 
-var user = angular.module('cashcontrol');
-
-user.factory('alertService', ['$timeout', function($timeout) {
+angular.module('cashcontrol')
+.factory('alertService', ['$timeout', function($timeout) {
 
     var alerts = [];
 

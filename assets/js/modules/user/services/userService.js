@@ -1,8 +1,7 @@
 'use strict';
 
-var user = angular.module('cashcontrol.user');
-
-user.factory('userService', ['$http', '$q', function($http, $q) {
+angular.module('cashcontrol')
+.factory('userService', ['$http', '$q', function ($http, $q) {
 
     var users = [];
 

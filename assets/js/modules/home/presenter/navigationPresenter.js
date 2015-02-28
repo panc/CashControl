@@ -1,8 +1,7 @@
 'use strict';
 
-var user = angular.module('cashcontrol');
-
-user.controller('navigationController', ['$scope', '$state', 'auth', 'alertService', function($scope, $state, auth, alertService) {
+angular.module('cashcontrol')
+.controller('navigationController', ['$scope', '$state', 'auth', 'alertService', function ($scope, $state, auth, alertService) {
 
     $scope.user = auth.user;
 

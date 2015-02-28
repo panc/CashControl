@@ -1,8 +1,7 @@
 'use strict';
 
-var user = angular.module('cashcontrol.user');
-
-user.controller('userController', ['$scope', 'userService', 'alertService', function($scope, userService, alertService) {
+angular.module('cashcontrol')
+.controller('userController', ['$scope', 'userService', 'alertService', function ($scope, userService, alertService) {
 
     $scope.roles = [
         { name: 'Admin', index: 1 },

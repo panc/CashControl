@@ -30,8 +30,8 @@ var jsFilesToInject = [
     'vendor/*/**/*.js',
 
     // load angluar app
-    'userConfig.js',
-    'app.js',
+    'js/userConfig.js',
+    'js/app.js',
 
     // then load the rest of the angular modules
 
