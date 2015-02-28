@@ -1,6 +1,6 @@
 'use strict';
 
-var user = angular.module('tipExpert.user');
+var user = angular.module('cashcontrol');
 
 user.factory('alertService', ['$timeout', function($timeout) {
 

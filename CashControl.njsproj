@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{65248d22-ddc8-4b44-a0df-a6160d0b6cc5}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <StartupFile>app.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -19,8 +19,6 @@
     <Content Include="assets\js\modules\home\views\header.html" />
     <Content Include="assets\js\modules\home\views\index.html" />
     <Content Include="assets\js\modules\home\views\loginHeader.html" />
-    <Content Include="assets\js\modules\projects\views\editMatchDialog.html" />
-    <Content Include="assets\js\modules\projects\views\matches.html" />
     <Content Include="assets\js\modules\user\views\profile.html" />
     <Content Include="assets\js\modules\user\views\user.html" />
     <Content Include="bower.json" />
@@ -34,15 +32,12 @@
     <Compile Include="assets\js\modules\home\presenter\languagePresenter.js" />
     <Compile Include="assets\js\modules\home\presenter\navigationPresenter.js" />
     <Compile Include="assets\js\modules\home\services\alertService.js" />
-    <Compile Include="assets\js\modules\projects\presenter\editMatchPresenter.js" />
-    <Compile Include="assets\js\modules\projects\presenter\matchPresenter.js" />
-    <Compile Include="assets\js\modules\projects\services\leagueService.js" />
-    <Compile Include="assets\js\modules\projects\services\matchService.js" />
     <Compile Include="assets\js\modules\user\presenter\userPresenter.js" />
     <Compile Include="assets\js\modules\user\presenter\userProfilePresenter.js" />
     <Compile Include="assets\js\modules\user\services\authenticationService.js" />
     <Compile Include="assets\js\modules\user\services\userService.js" />
     <Compile Include="assets\js\modules\user\userConfig.js" />
+    <Compile Include="assets\js\userConfig.js" />
     <Compile Include="Gruntfile.js" />
     <Content Include="assets\robots.txt" />
     <Content Include="assets\favicon.ico" />

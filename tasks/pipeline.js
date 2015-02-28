@@ -25,12 +25,12 @@ var jsFilesToInject = [
   
     // Load sails.io before everything else
     'vendor/sails.io.js/sails.io.js',
-    'vendor/javascript-detect-element-resize/detect-element-resize.js',
     'vendor/jquery/jquery.js',
     'vendor/angular/angular.js',
     'vendor/*/**/*.js',
 
     // load angluar app
+    'userConfig.js',
     'app.js',
 
     // then load the rest of the angular modules

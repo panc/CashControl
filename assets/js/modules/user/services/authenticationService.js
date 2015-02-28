@@ -1,8 +1,8 @@
 'use strict';
 
-var userModule = angular.module( 'tipExpert.user' );
+var userModule = angular.module( 'cashcontrol.user' );
 
-userModule.factory('Auth', ['$http', '$q', '$cookieStore', 'userService', function($http, $q, $cookieStore, userService) {
+userModule.factory('auth', ['$http', '$q', 'userService', function($http, $q, userService) {
 
     var accessLevels = userConfig.accessLevels;
     var userRoles = userConfig.roles;
@@ -29,8 +29,7 @@ userModule.factory('Auth', ['$http', '$q', '$cookieStore', 'userService', functi
 
     var currentUser = $cookieStore.get('user') || { id: '', name: '', role: userRoles.public, email: '' };
     currentUser.isLoggedIn = currentUser.role == userRoles.user || currentUser.role == userRoles.admin;
-    $cookieStore.remove('user');
-
+    
     reloadProfile();
 
     return {

@@ -1,13 +1,13 @@
 'use strict';
 
-var user = angular.module('tipExpert.user');
+var user = angular.module('cashcontrol');
 
-user.controller('navigationController', ['$scope', '$state', 'Auth', 'alertService', function($scope, $state, Auth, alertService) {
+user.controller('navigationController', ['$scope', '$state', 'auth', 'alertService', function($scope, $state, auth, alertService) {
 
-    $scope.user = Auth.user;
+    $scope.user = auth.user;
 
     $scope.logout = function() {
-        Auth.logout(function() {
+        auth.logout(function() {
             $state.go('home');
         },
         alertService.error);
@@ -19,7 +19,7 @@ user.controller('navigationController', ['$scope', '$state', 'Auth', 'alertServi
         if ($scope.loginForm.$invalid)
                 return;
 
-        Auth.login({
+        auth.login({
                 email: $scope.loginForm.email.$modelValue,
                 password: $scope.loginForm.password.$modelValue
             },

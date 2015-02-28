@@ -1,6 +1,6 @@
 'use strict';
 
-var user = angular.module('tipExpert.user');
+var user = angular.module('cashcontrol.user');
 
 user.factory('userService', ['$http', '$q', function($http, $q) {
 
@@ -30,13 +30,6 @@ user.factory('userService', ['$http', '$q', function($http, $q) {
 
     return {
         loadAllUser: load,
-
-        loadFriendsForUser: function(user) {
-            // todo:
-            // return all users for now
-            // we can load the friends of a user later on
-            return load();
-        },
 
         loadProfile: function(userId) {
             var deferred = $q.defer();

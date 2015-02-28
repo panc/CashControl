@@ -1,10 +1,10 @@
 'use strict';
 
 // define all available modules
-angular.module('casheconrol.user', [ 'ngCookies' ]);
-angular.module('casheconrol.project', [ ]);
+angular.module('cashcontrol.user', [ ]);
+angular.module('cashcontrol.project', [ ]);
 
-var cashcontrol = angular.module('cashcontrol', ['cashcontrol.home', 'cashcontrol.user', 'cashcontrol.project', 
+var cashcontrol = angular.module('cashcontrol', ['cashcontrol.user', 'cashcontrol.project', 
                                                  'ui.bootstrap', 'ui.router', 'ngRoute', 'pascalprecht.translate']);
 
 // configure the main module
