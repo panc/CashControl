@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cashcontrol')
-.controller('navigationController', ['$scope', '$state', 'auth', 'alertService', function ($scope, $state, auth, alertService) {
+.controller('navigationController', ['$scope', '$state', 'auth', 'toasts', function ($scope, $state, auth, toasts) {
 
     $scope.user = auth.user;
 
@@ -9,7 +9,7 @@ angular.module('cashcontrol')
         auth.logout(function() {
             $state.go('home');
         },
-        alertService.error);
+        toasts.error);
     };
 
     $scope.login = function() {
@@ -25,16 +25,16 @@ angular.module('cashcontrol')
             function(res) {
                 $state.go('games.overview');
             },
-            alertService.error);
+            toasts.error);
     };
 
     $scope.loginOauth = function(provider) {
         $window.location.href = '/auth/' + provider;
     };
     
-    $scope.alerts = alertService.alerts;
+    $scope.alerts = toasts.entries;
 
     $scope.closeAlert = function(index) {
-        alertService.closeAlert(index);
+            toasts.closeToast(index);
     };
 }]);

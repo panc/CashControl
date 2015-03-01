@@ -2,7 +2,7 @@
 
 angular.module('cashcontrol')
 .controller('homeController', [
-    '$scope', '$state', '$window', 'auth', 'alertService', function($scope, $state, $window, auth, alertService) {
+    '$scope', '$state', '$window', 'auth', 'toasts', function($scope, $state, $window, auth, toasts) {
 
         $scope.user = {
             name: '',
@@ -20,7 +20,7 @@ angular.module('cashcontrol')
 				.then(function() {
 					$state.go('games.overview');
 				})
-				.catch(alertService.error);
+				.catch(toasts.error);
         };
 
         $scope.loginOauth = function(provider) {

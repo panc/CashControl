@@ -119,7 +119,7 @@ cashcontrol.config(['$translateProvider', function($translateProvider) {
     });
 }]);
 
-cashcontrol.run(['$rootScope', '$location', '$state', 'auth', 'alertService', function($rootScope, $location, $state, auth, alertService) {
+cashcontrol.run(['$rootScope', '$location', '$state', 'auth', 'toasts', function($rootScope, $location, $state, auth, toasts) {
 
     $rootScope.$state = $state;
 
@@ -137,7 +137,7 @@ cashcontrol.run(['$rootScope', '$location', '$state', 'auth', 'alertService', fu
                 if (!fromState.controller)
                     $state.go('projects.overview');
 
-                alertService.error('You are not allowed to access this page');
+                    toasts.error('You are not allowed to access this page');
             }
         }
         else if (toState.name == 'home' && isLoggedIn) {

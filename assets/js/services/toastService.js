@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('cashcontrol')
-.factory('alertService', ['$timeout', function($timeout) {
+.factory('toasts', ['$timeout', function($timeout) {
 
-    var alerts = [];
+    var toasts = [];
 
-    var addAlert = function(message, type) {
+    var addToast = function(message, type) {
 
-		var text = 'An error occoured';
+		var text = 'An error occoured!';
 		
 		if (message != undefined) {
 			if (message.msg != undefined)
@@ -21,34 +21,34 @@ angular.module('cashcontrol')
         var item = { msg: text, type: type };
 
         item.timeout = $timeout(function() {
-            closeAlert(item);
+            closeToast(item);
         }, 5000);  
 
-        alerts.push(item);
+        toasts.push(item);
     };
 
-    var closeAlert = function(item) {
+    var closeToast = function(item) {
 
         if (item.timeout)
             $timeout.cancel(item.timeout);
 
-        var index = alerts.indexOf(item);
-        alerts.splice(index, 1);
+        var index = toasts.indexOf(item);
+        toasts.splice(index, 1);
     };
 
     return {
-        alerts: alerts,
+        entries: toasts,
 
         error: function(message) {
-            addAlert(message, 'warning');
+            addToast(message, 'warning');
         },
 
         info: function(message) {
-            addAlert(message, 'success');
+            addToast(message, 'success');
         },
 
-        closeAlert: function(index) {
-            closeAlert(alerts[index]);
+        closeToast: function(index) {
+            closeToast(toasts[index]);
         }
     };
 }]);

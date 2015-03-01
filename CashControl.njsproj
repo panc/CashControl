@@ -16,11 +16,14 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Content Include="assets\js\modules\home\views\header.html" />
-    <Content Include="assets\js\modules\home\views\index.html" />
-    <Content Include="assets\js\modules\home\views\loginHeader.html" />
-    <Content Include="assets\js\modules\user\views\profile.html" />
-    <Content Include="assets\js\modules\user\views\user.html" />
+    <Content Include="assets\templates\home\header.html" />
+    <Content Include="assets\templates\home\index.html" />
+    <Content Include="assets\templates\home\loginHeader.html" />
+    <Content Include="assets\templates\user\profile.html" />
+    <Content Include="assets\templates\user\user.html" />
+    <Content Include="assets\locales\de.json" />
+    <Content Include="assets\locales\en.json" />
+    <Content Include="assets\styles\importer.less" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -28,14 +31,14 @@
     <Compile Include="api\models\Cashbook.js" />
     <Compile Include="app.js" />
     <Compile Include="assets\js\app.js" />
-    <Compile Include="assets\js\modules\home\presenter\homePresenter.js" />
-    <Compile Include="assets\js\modules\home\presenter\languagePresenter.js" />
-    <Compile Include="assets\js\modules\home\presenter\navigationPresenter.js" />
-    <Compile Include="assets\js\modules\home\services\alertService.js" />
-    <Compile Include="assets\js\modules\user\presenter\userPresenter.js" />
-    <Compile Include="assets\js\modules\user\presenter\userProfilePresenter.js" />
-    <Compile Include="assets\js\modules\user\services\authService.js" />
-    <Compile Include="assets\js\modules\user\services\userService.js" />
+    <Compile Include="assets\js\controllers\home\homeController.js" />
+    <Compile Include="assets\js\controllers\home\languageController.js" />
+    <Compile Include="assets\js\controllers\home\navigationController.js" />
+    <Compile Include="assets\js\services\toastService.js" />
+    <Compile Include="assets\js\controllers\user\userController.js" />
+    <Compile Include="assets\js\controllers\user\userProfileController.js" />
+    <Compile Include="assets\js\services\authService.js" />
+    <Compile Include="assets\js\services\userService.js" />
     <Compile Include="assets\js\userConfig.js" />
     <Compile Include="Gruntfile.js" />
     <Content Include="assets\robots.txt" />
@@ -57,6 +60,7 @@
     <Compile Include="config\sockets.js" />
     <Compile Include="config\views.js" />
     <Content Include="tasks\README.md" />
+    <Compile Include="tasks\config\bower.js" />
     <Compile Include="tasks\pipeline.js" />
     <Content Include="views\403.ejs" />
     <Content Include="views\404.ejs" />
@@ -110,19 +114,13 @@
     <Folder Include="assets" />
     <Folder Include="assets\images" />
     <Folder Include="assets\js" />
-    <Folder Include="assets\js\modules\" />
-    <Folder Include="assets\js\modules\home\" />
-    <Folder Include="assets\js\modules\home\presenter\" />
-    <Folder Include="assets\js\modules\home\services\" />
-    <Folder Include="assets\js\modules\home\views\" />
-    <Folder Include="assets\js\modules\projects\" />
-    <Folder Include="assets\js\modules\projects\presenter\" />
-    <Folder Include="assets\js\modules\projects\services\" />
-    <Folder Include="assets\js\modules\projects\views\" />
-    <Folder Include="assets\js\modules\user\" />
-    <Folder Include="assets\js\modules\user\presenter\" />
-    <Folder Include="assets\js\modules\user\services\" />
-    <Folder Include="assets\js\modules\user\views\" />
+    <Folder Include="assets\js\controllers\home\" />
+    <Folder Include="assets\templates\home\" />
+    <Folder Include="assets\js\controllers\user\" />
+    <Folder Include="assets\js\controllers\" />
+    <Folder Include="assets\js\services\" />
+    <Folder Include="assets\templates\user\" />
+    <Folder Include="assets\locales\" />
     <Folder Include="assets\styles" />
     <Folder Include="assets\templates" />
     <Folder Include="config" />

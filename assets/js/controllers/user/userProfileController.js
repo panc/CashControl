@@ -2,7 +2,7 @@
 
 angular.module('cashcontrol')
 .controller('userProfileController', [
-    '$scope', '$stateParams', 'userService', 'alertService', function($scope, $stateParams, userService, alertService) {
+    '$scope', '$stateParams', 'userService', 'toasts', function($scope, $stateParams, userService, toasts) {
 
         $scope.user = {};
         $scope.hideRole = true;
@@ -13,7 +13,7 @@ angular.module('cashcontrol')
                     $scope.user = user;
                     $scope.hideRole = user.role == userConfig.roles.user;
                 })
-                .catch(alertService.error);
+                .catch(toasts.error);
         }
     }
 ]);

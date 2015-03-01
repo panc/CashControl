@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cashcontrol')
-.controller('userController', ['$scope', 'userService', 'alertService', function ($scope, userService, alertService) {
+.controller('userController', ['$scope', 'userService', 'toasts', function ($scope, userService, toasts) {
 
     $scope.roles = [
         { name: 'Admin', index: 1 },
@@ -11,14 +11,14 @@ angular.module('cashcontrol')
     $scope.save = function() {
         userService.update($scope.users)
             .then(function() {
-                alertService.info('Successfully saved.');
+                toasts.info('Successfully saved.');
             })
-            .catch(alertService.error);
+            .catch(toasts.error);
     };
 
     userService.loadAllUser()
         .then(function(users) {
             $scope.users = users;
         })
-        .catch(alertService.error);
+        .catch(toasts.error);
 }]);
