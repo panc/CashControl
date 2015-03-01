@@ -1,6 +1,10 @@
 'use strict';
 
-var cashcontrol = angular.module('cashcontrol', ['ui.bootstrap', 'ui.router', 'ngRoute', 'pascalprecht.translate']);
+var cashcontrol = angular.module('cashcontrol', [
+    'ui.bootstrap', 
+    'ui.router', 
+    'ngCookies',
+    'pascalprecht.translate']);
 
 // configure the main module
 cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -115,15 +119,15 @@ cashcontrol.config(['$translateProvider', function($translateProvider) {
     });
 }]);
 
-cashcontrol.run(['$rootScope', '$location', '$state', 'Auth', 'alertService', function($rootScope, $location, $state, Auth, alertService) {
+cashcontrol.run(['$rootScope', '$location', '$state', 'auth', 'alertService', function($rootScope, $location, $state, auth, alertService) {
 
     $rootScope.$state = $state;
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
 
-        var isLoggedIn = Auth.user.isLoggedIn;
+        var isLoggedIn = auth.user.isLoggedIn;
 
-        if (!Auth.authorize(toState.access)) {
+        if (!auth.authorize(toState.access)) {
 
             event.preventDefault();
             if (!isLoggedIn) {

@@ -27,6 +27,10 @@ var jsFilesToInject = [
     'vendor/sails.io.js/sails.io.js',
     'vendor/jquery/jquery.js',
     'vendor/angular/angular.js',
+    'vendor/angular-cookies/angular-cookies.js',
+    'vendor/angular-translate/angular-translate.js',
+    'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+    'vendor/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
     'vendor/*/**/*.js',
 
     // load angluar app
@@ -35,9 +39,9 @@ var jsFilesToInject = [
 
     // then load the rest of the angular modules
 
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
-  'js/**/*.js'
+    // All of the rest of your client-side js files
+    // will be injected here in no particular order.
+    'js/**/*.js'
 ];
 
 

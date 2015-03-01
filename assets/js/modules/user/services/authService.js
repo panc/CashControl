@@ -26,7 +26,7 @@ angular.module( 'cashcontrol' )
         currentUser.isAdmin = user.role == userRoles.admin;
     };
 
-    var currentUser = $cookieStore.get('user') || { id: '', name: '', role: userRoles.public, email: '' };
+    var currentUser = /*$cookieStore.get('user') || */{ id: '', name: '', role: userRoles.public, email: '' };
     currentUser.isLoggedIn = currentUser.role == userRoles.user || currentUser.role == userRoles.admin;
     
     reloadProfile();
