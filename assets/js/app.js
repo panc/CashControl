@@ -13,7 +13,7 @@ cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     var accessLevels = userConfig.accessLevels;
     var abstractView = {
         'header': {
-            templateUrl: '/modules/home/views/header.html',
+            templateUrl: 'templates/home/header.html',
             controller: 'navigationController',
         },
         'main': {
@@ -33,14 +33,14 @@ cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         .state('user.overview', {
             title: 'Users',
             url: '',
-            templateUrl: '/modules/user/views/user.html',
+            templateUrl: 'templates/user/user.html',
             controller: 'userController',
             access: accessLevels.user
         })
         .state('user.profile', {
             title: 'User profile',
             url: '/:userId',
-            templateUrl: '/modules/user/views/profile.html',
+            templateUrl: 'templates/user/profile.html',
             controller: 'userProfileController',
             access: accessLevels.user
         })
@@ -54,7 +54,7 @@ cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         .state('projects.overview', {
             title: 'Projects',
             url: '',
-            templateUrl: '/modules/projects/views/projects.html',
+            templateUrl: 'templates/projects/projects.html',
             controller: 'projectController',
             access: accessLevels.admin
         })
@@ -65,11 +65,11 @@ cashcontrol.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             url: '/',
             views: {
                 'header': {
-                    templateUrl: '/js/modules/home/views/loginHeader.html',
+                    templateUrl: 'templates/home/loginHeader.html',
                     controller: 'navigationController',
                 },
                 'main': {
-                    templateUrl: '/js/modules/home/views/index.html',
+                    templateUrl: 'templates/home/index.html',
                     controller: 'homeController'
                 }
             },
